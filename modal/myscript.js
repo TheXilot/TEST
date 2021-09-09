@@ -8,8 +8,10 @@ const show = function () {
   overlay.classList.remove('hidden');
 };
 const hide = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
+  // modal.classList.add('hidden');
+  // overlay.classList.add('hidden');
+  modal.classList.toggle('hidden');
+  overlay.classList.toggle('hidden');
 };
 //Event btn show
 btnModals.forEach(item => {
@@ -19,3 +21,7 @@ btnModals.forEach(item => {
 btnCloseModal.addEventListener('click', hide);
 //Event overlay click
 overlay.addEventListener('click', hide);
+//Event keydown esc
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') hide();
+});

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link href="mycss.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn btn-reset">🎮 NEW GAME</button>
+      <button class="btn btn-roll">🎲 ROLL DICE</button>
+      <button class="btn btn-hold">🍰 HOLD</button>
+      <img
+        src="https://www.calculator.net/img/dice1.png"
+        alt=""
+        class="imgdice hidden"
+      />
+      <div class="subcontainer player0 active">
+        <div class="up">
+          <p class="player-label player0">PLAYER 1</p>
+          <p class="score player0">0</p>
+        </div>
+        <div class="down">
+          <p class="current-label">CURRENT</p>
+          <p class="current-score player0">0</p>
+        </div>
+      </div>
+      <div class="subcontainer player1">
+        <div class="up">
+          <p class="player-label player1">PLAYER 2</p>
+          <p class="score player1">0</p>
+        </div>
+        <div class="down">
+          <p class="current-label">CURRENT</p>
+          <p class="current-score player1">0</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="myscript.js"></script>
+  </body>
+</html>
