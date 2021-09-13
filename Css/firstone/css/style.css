@@ -1,0 +1,134 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #777;
+  padding: 30px;
+}
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(128, 214, 113, 0.822),
+      rgba(40, 180, 133, 0.822)
+    ),
+    url('../img/hero.jpg');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo {
+  height: 35px;
+}
+.heading-primary {
+  color: #ffff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 10vh;
+}
+.heading-primary-main {
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  display: block;
+  animation: moveInLeft 1s ease-out;
+  /* animation-name: moveInLeft;
+  animation-duration: 2s; */
+}
+.heading-primary-sub {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+  display: block;
+  animation: moveInRight 1s ease-out;
+  /* animation-name: moveInRight;
+  animation-duration: 2s; */
+}
+.text-box {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 15px 40px;
+  font-size: 20px;
+  line-height: 50%;
+  transition: all 0.2s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* animation: btnHover 0.2s ease-in; */
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /* animation: btnHover 0.2s ease-in; */
+}
+.btn-white {
+  color: #777;
+  background-color: #fff;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes btnHover {
+  0% {
+    padding: 15px 40px;
+  }
+  100% {
+    padding: 30px 80px;
+  }
+}
