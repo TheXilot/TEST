@@ -94,8 +94,7 @@ const roll = function () {
     players[activePlayer].score = 0;
     players[activePlayer].currentScore = 0;
     //change active player
-    switchPlayer();
-    render();
+    hold();
     return -1;
   }
   players[activePlayer].currentScore += diceNumber;
@@ -138,8 +137,7 @@ const robot = async function () {
     await sleep(2000);
     if (numberOne < 0) return;
   }
-  switchPlayer();
-  render();
+  hold();
 };
 //button Reset
 
