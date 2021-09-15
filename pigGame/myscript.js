@@ -75,7 +75,7 @@ const reset = function () {
 const switchPlayer = () => {
   console.log('in switch function active player before change :', activePlayer);
   activePlayer = activePlayer === 0 ? 1 : 0;
-  play('error');
+  play('switch');
   img.classList.toggle('hidden', 0);
   subContainerPlayer0.classList.toggle('active');
   subContainerPlayer1.classList.toggle('active');
