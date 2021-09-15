@@ -19,12 +19,12 @@ body {
 }
 .player-label {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   color: black;
   margin-top: 20%;
 }
 .container {
-  width: 60%;
+  width: 70vw;
   border-radius: 6px;
   height: 80%;
   display: flex;
@@ -33,10 +33,10 @@ body {
 }
 .down {
   background-color: rgb(156, 0, 0);
-  border-radius: 6px;
+  border-radius: 0.6rem;
   /* width: 40%; */
   font-size: 1.4rem;
-  padding: 14px 30px;
+  padding: 1.4rem 1.6vw;
 }
 .up,
 .down {
@@ -69,24 +69,33 @@ body {
 .active {
   opacity: 1 !important;
   background-color: rgba(240, 248, 255, 0.363);
-  animation: pulse 2s infinite !important;
+  animation: pulse 0.5s ease-out !important;
+}
+.win {
+  opacity: 1 !important;
+  background-color: rgb(255, 255, 255);
+  animation: pulse 0.5s ease-out !important;
 }
 .btn {
   position: absolute;
-  padding: 2px 12px;
+  padding: 0.2rem 1.2rem;
   border-radius: 3rem;
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 5;
+  transition: all 0.2s;
+}
+.disabled {
+  display: none;
 }
 .btn-roll {
-  top: 66%;
+  top: 54%;
   padding: 2px 12px;
   border-radius: 3rem;
 }
 .btn-hold {
   position: absolute;
-  top: 71%;
+  top: 60%;
   padding: 2px 12px;
   border-radius: 3rem;
 }
@@ -97,12 +106,15 @@ body {
   border-radius: 3rem;
 }
 .imgdice {
+  width: 17vw;
+  max-width: 8.5rem;
   position: absolute;
-  top: 35%;
+  top: 40%;
   border-style: none;
+  z-index: 5;
 }
 .hidden {
-  /* display: none; */
+  display: none;
 }
 @keyframes pulse {
   0% {
